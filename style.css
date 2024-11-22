@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background: linear-gradient(to right, #8e44ad, #3498db);
+    color: #333;
+    padding: 40px 0;
+    font-size: 16px;
+}
+
+h1, h3 {
+    text-align: center;
+    color: #6fb0ca;
+}
+
+h1 {
+    font-size: 3.5em;
+    font-weight: 600;
+    margin-bottom: 0.5em;
+    letter-spacing: 2px;
+}
+
+h3 {
+    font-size: 1.2em;
+    color: #657880;
+    margin-bottom: 1.5em;
+    font-weight: 400;
+}
+
+ol {
+    margin-bottom: 20px;
+    color: #657880;
+    font-size: 1.1em;
+    margin-left: 30px;
+}
+
+.container {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    margin: 0 auto;
+    margin-top: 40px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.container:hover {
+    transform: translateY(-5px);
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 8px;
+    display: inline-block;
+    color: #333;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 14px 20px;
+    padding-left: 45px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1em;
+    outline: none;
+    transition: border-color 0.3s ease-in-out;
+    margin-bottom: 20px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+select:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 10px rgba(52, 152, 219, 0.3);
+}
+
+.input-container {
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.input-container input {
+    width: 100%;
+    padding: 14px 20px 14px 45px; 
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    transition: border-color 0.3s ease-in-out;
+}
+
+.input-container i {
+    position: absolute;
+    left: 14px; 
+    top: 45%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #3498db;
+}
+
+button {
+    background: linear-gradient(to right, #8e44ad, #3498db);
+    background-color: #3498db;
+    color: white;
+    padding: 14px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    width: 100%;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #2980b9;
+    transform: translateY(-3px);
+}
+
+h2 {
+    text-align: center;
+    margin-top: 30px;
+    color: #333;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+table, th, td {
+    border: 1.5px solid #ccc;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #3498db;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #aed9ff38;
+    cursor: pointer;
+}

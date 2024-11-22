@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Enrollment Form</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script>
+        function updateInterests() {
+            const course = document.getElementById("course").value;
+            const interestsDiv = document.getElementById("interests");
+
+            interestsDiv.innerHTML = "";
+
+            if (course === "BSIT") {
+                interestsDiv.innerHTML = `
+                    <input type="checkbox" id="web-development" name="interests" value="Web Development">
+                    <label for="web-development">Web Development</label><br>
+                    <input type="checkbox" id="data-science" name="interests" value="Data Science">
+                    <label for="data-science">Data Science</label><br>
+                    <input type="checkbox" id="networking" name="interests" value="Networking">
+                    <label for="networking">Networking</label><br>
+                    <input type="checkbox" id="graphic-design" name="interests" value="Graphic Design">
+                    <label for="graphic-design">Graphic Design</label><br>
+                `;
+    
+            } else if(course === "BSSW") { 
+                interestsDiv.innerHTML = `
+                    <input type="checkbox" id="psychotherapist" name="interests" value="Psychotherapist">
+                    <label for="web-development">Psychotherapist</label><br>
+                    <input type="checkbox" id="casemanager" name="interests" value="Case Manager">
+                    <label for="data-science">Case Manager</label><br>
+                    <input type="checkbox" id="counselor" name="interests" value="Counselor">
+                    <label for="networking">Counselor</label><br>
+                    <input type="checkbox" id="author" name="interests" value="Author">
+                    <label for="graphic-design">Author</label><br>
+                `;
+            } else if(course === "BSPA" ) {
+                interestsDiv.innerHTML = `
+                    <input type="checkbox" id="budgetanalyst" name="interests" value="Budget Analyst">
+                    <label for="web-development">Budget Analyst</label><br>
+                    <input type="checkbox" id="economist" name="interests" value="Economist">
+                    <label for="data-science">Economist</label><br>
+                    <input type="checkbox" id="statedepartment" name="interests" value="State Department">
+                    <label for="networking">State Department</label><br>
+                    <input type="checkbox" id="citymanagement" name="interests" value="City Management">
+                    <label for="graphic-design">City Management</label><br>
+                `;
+            } else{
+                interestsDiv.innerHTML =  `
+                    <input type="checkbox" id="hotelclerk" name="interests" value="Hotel Clerk">
+                    <label for="hotelclerk">Hotel Clerk</label><br>
+                    <input type="checkbox" id="chef" name="interests" value="Chef">
+                    <label for="chef">Chef</label><br>
+                    <input type="checkbox" id="kitchenmanager" name="interests" value="Kitchen Manager">
+                    <label for="kitchenmanager">Kitchen Manager</label><br>
+                    <input type="checkbox" id="barista" name="interests" value="Barista">
+                    <label for="barista">Barista</label><br>
+                `;  
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Student Enrollment Form</h1>
+        <h3>Instructions:</h3>
+        <ol>
+            <li>Fill in the form fields.</li>
+            <li>Check your interests.</li>
+            <li>Click "Enroll Now" to submit.</li>
+        </ol>
+    
+        <form action="#" method="post">
+            <div class="input-container">
+                <i class="fas fa-user"></i>
+                <label for="full-name">Full Name:</label><br>
+                <input type="text" id="full-name" name="full-name" placeholder="Enter your full name" required ><br><br>
+            </div>
+            <div class="input-container">
+                <i class="fas fa-envelope"></i>
+                <label for="email">Email Address:</label><br>
+                <input type="email" id="email" name="email" placeholder="yourname@web.com" required><br><br>
+            </div>
+            <div class="input-container">
+                <i class="far fa-calendar-alt"></i>
+                <label for="age">Age:</label><br>
+                <input type="number" id="age" name="age" placeholder="Enter your age" required><br><br>
+            </div>
+            <label>Sex:</label><br>
+            <input type="radio" id="male" name="sex" value="Male" required>
+            <label for="male">Male</label><br>
+            <input type="radio" id="female" name="sex" value="Female" required>
+            <label for="female">Female</label><br><br>
+
+        <div class="input-container">
+            <i class="fas fa-user-graduate"></i>
+            <label for="course">Course Options:</label><br>
+            <select id="course" name="course" onchange="updateInterests()" required>
+                <option value="BSIT">BSIT</option>
+                <option value="BSSW">BSSW</option>
+                <option value="BSPA">BSPA</option>
+                <option value="DHRS">DHRS</option>
+            </select><br><br>
+        </div>
+    
+            <label>Interests:</label><br>
+            <div id="interests">
+                <input type="checkbox" id="web-development" name="interests" value="Web Development">
+                <label for="web-development">Web Development</label><br>
+                <input type="checkbox" id="data-science" name="interests" value="Data Science">
+                <label for="data-science">Data Science</label><br>
+                <input type="checkbox" id="networking" name="interests" value="Networking">
+                <label for="networking">Networking</label><br>
+                <input type="checkbox" id="graphic-design" name="interests" value="Graphic Design">
+                <label for="graphic-design">Graphic Design</label><br>
+            </div><br>
+    
+            <button type="submit">Enroll Now</button>
+        </form>
+
+        <h2>Student Data</h2>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Age</th>
+                <th>Sex</th>
+                <th>Course</th>
+                <th>Interests</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Aiah Arceta</td>
+                <td>queenraiah@web.com</td>
+                <td>23</td>
+                <td>Female</td>
+                <td>BSIT</td>
+                <td>Web Development, Networking</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Stacey Sevilleja</td>
+                <td>princessaubrey@web.com</td>
+                <td>21</td>
+                <td>Female</td>
+                <td>BSIT</td>
+                <td>Graphic Design, Web Development</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Jhoanna Robles</td>
+                <td>jrrobles@web.com</td>
+                <td>20</td>
+                <td>Female</td>
+                <td>BSSW</td>
+                <td>Psychotherapist, Counselor</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Colet Vergara</td>
+                <td>colet@web.com</td>
+                <td>23</td>
+                <td>Female</td>
+                <td>BSPA</td>
+                <td>Budget Analyst, City Management</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Maloi Ricalde</td>
+                <td>yvesmary@web.com</td>
+                <td>22</td>
+                <td>Female</td>
+                <td>BSIT</td>
+                <td>Data Science, Web Development</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Mikha Lim</td>
+                <td>itzjanna@web.com</td>
+                <td>21</td>
+                <td>Female</td>
+                <td>BSSW</td>
+                <td>Case Manager, Author</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>Gwen Apuli</td>
+                <td>gwenapuli@web.com</td>
+                <td>22</td>
+                <td>Female</td>
+                <td>DHRS</td>
+                <td>Chef, Kitchen Manager</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>Sheena Catacutan</td>
+                <td>sheenamae@web.com</td>
+                <td>20</td>
+                <td>Female</td>
+                <td>BSIT</td>
+                <td>Web Development, Graphic Design</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>Jao Canlas</td>
+                <td>justjao@web.com</td>
+                <td>22</td>
+                <td>Male</td>
+                <td>BSIT</td>
+                <td>Networking, Web Development</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>Gelo Rivera</td>
+                <td>gelloworld@web.com</td>
+                <td>23</td>
+                <td>Male</td>
+                <td>BSPA</td>
+                <td>Economist, City Management</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
